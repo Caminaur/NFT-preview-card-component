@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="p-4 flex justify-center items-center h-full mt-20 md:h-screen md:mt-0 body"
+  >
+    <div
+      class="w-full card rounded-2xl p-6 flex flex-col gap-5 md:max-w-90 md:shadow"
+    >
+      <div class="w-full rounded-xl image-bg relative">
+        <div class="overlay w-full h-full rounded-xl absolute"></div>
+        <img
+          class="absolute left-1/2 top-1/2 eye"
+          src="images/icon-view.svg"
+          alt=""
+        />
+        <img
+          class="w-full rounded-xl"
+          src="./images/image-equilibrium.jpg"
+          alt=""
+        />
+      </div>
+      <div class="flex flex-col gap-2">
+        <p class="title text-xl">Equilibrium #3429</p>
+        <p class="sgt text-sm leading-loose tracking-wide">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex items-center justify-center gap-2">
+          <img class="w-3" src="./images/icon-ethereum.svg" alt="" />
+          <p class="coin-value font-bold">0.041 ETH</p>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img class="w-5 h-5" src="./images/icon-clock.svg" alt="" />
+          <p class="sgt">3 days left</p>
+        </div>
+      </div>
+      <div class="h-0.5 w-full line"></div>
+      <div class="flex items-center gap-4">
+        <img
+          class="h-8 rounded-full avatar"
+          src="images/image-avatar.png"
+          alt=""
+        />
+        <p class="sgt">Creation of <span class="name">Jules Wyvern</span></p>
+      </div>
+    </div>
+
+    <div
+      class="text-md absolute bottom-2 text-center max-sm:text-xs attribution-div"
+    >
+      <a
+        class="attribution"
+        href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H"
+      >
+        Challenge
+      </a>
+      coded by
+      <a
+        href="https://github.com/Caminaur/Mortgage-Calculator"
+        class="attribution"
+      >
+        Julian Caminaur
+      </a>
+      .
+    </div>
+  </body>
+</html>

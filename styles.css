@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+
+  --neutral-very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --neutral-very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --neutral-very-dark-blue-line: hsl(215, 32%, 27%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-size-paragraph: 18px;
+  --font-family: "Outfit", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+.body {
+  background-color: var(--neutral-very-dark-blue-main-bg);
+}
+.card {
+  background-color: var(--neutral-very-dark-blue-card-bg);
+  position: relative;
+}
+.card::after {
+  display: none;
+  z-index: 1;
+  content: "";
+  height: calc(100% + 5.7rem);
+  width: calc(100% + 5.8rem);
+  left: -50px;
+  top: -25px;
+  border-radius: 10% 10% 12% 12%;
+  position: absolute;
+  border: 80px solid rgba(0 0 0 / 0.03);
+}
+
+.card::before {
+  display: none;
+  z-index: -1;
+  content: "";
+  height: calc(100% + 2.7rem);
+  width: calc(100% + 2.5rem);
+  left: -20px;
+  top: 7px;
+  border-radius: 10% 10% 12% 12%;
+  position: absolute;
+  border-bottom: 45px solid rgba(0 0 0 / 0.05);
+  border-left: 45px solid rgba(0 0 0 / 0.05);
+  border-right: 45px solid rgba(0 0 0 / 0.05);
+}
+.title {
+  color: var(--neutral-white);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: color 300ms ease;
+}
+.sgt {
+  color: var(--primary-soft-blue);
+}
+.coin-value {
+  color: var(--primary-cyan);
+}
+.line {
+  background-color: var(--neutral-very-dark-blue-line);
+}
+.avatar {
+  border: 1px solid var(--neutral-white);
+}
+.name {
+  color: var(--neutral-white);
+  cursor: pointer;
+  transition: color 300ms ease;
+}
+
+.title:hover {
+  color: var(--primary-cyan);
+}
+.name:hover {
+  color: var(--primary-cyan);
+}
+.overlay {
+  opacity: 0;
+  background-color: var(--primary-cyan);
+  transition: opacity 300ms ease;
+  cursor: pointer;
+}
+.overlay:hover {
+  opacity: 0.5;
+}
+
+.overlay:hover ~ .eye {
+  opacity: 1;
+}
+.eye {
+  opacity: 0;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+.attribution {
+  color: var(--primary-soft-blue);
+  opacity: 0.7;
+}
+.attribution-div {
+  color: rgba(255 255 255 / 0.66);
+}
+.attribution:hover {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .card::after,
+  .card::before {
+    display: block;
+  }
+}
