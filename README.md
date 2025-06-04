@@ -27,11 +27,11 @@ Users should be able to:
 
 #### Desktop
 
-<img src='./assets/Desktop.png' width='700px' style='border-radius:8px;'/>
+<img src='./assets/desktop.png' width='700px' style='border-radius:8px;'/>
 
 #### Mobile
 
-<img src='./assets/Mobile.png' width='325px' style='border-radius:8px;'/>
+<img src='./assets/mobile.png' width='325px' style='border-radius:8px;'/>
 
 ### Links
 
